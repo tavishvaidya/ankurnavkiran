@@ -29,6 +29,11 @@ body {
     padding-top:50px;
     padding-bottom:50px;
 }
+
+.pad-top-botm-small {
+  padding-top: 15px;
+  padding-bottom: 45px;
+}
   
 h2 {
     color:#ff0000;
