@@ -160,7 +160,8 @@ margin-bottom: 30px;
             color: #159238;
         }
         .div-trans span {
-            color: #ff0000;
+              color: #F5E9EB;
+              font-size: 23px;
         }
         .div-trans button {
             background-color: #159238;
@@ -351,4 +352,13 @@ margin-top: 20px;
    padding:10px;
 }
 
- 
+#contact_addresses p{
+    box-sizing: border-box;
+    float: left;
+    padding: 1em;
+    width: 50%;
+}
+.sub-head_contact{
+  padding-top: 20px;
+  display: block;
+}
