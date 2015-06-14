@@ -14,7 +14,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") //check if form was submitted
 		  // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
-            http_response_code(400);
+			header("HTTP/1.1 400 ERROR.");
+            // http_response_code(400);
             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
             exit;
         }
@@ -30,21 +31,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") //check if form was submitted
 		if($ret == true)
 		{
 			$successFlag=1;
-			header("HTTP/1.1 200 Thank You! Your message has been sent.");
+			header("HTTP/1.1 200 OK");
 			// http_response_code(200);
-			// echo "Thank You! Your message has been sent.";
+			echo "Thank You! Your message has been sent.";
 		}
 		else{
-			header("HTTP/1.1 500 Oops! Something went wrong and we couldn't send your message.");
+			header("HTTP/1.1 500 ERROR.");
 			// http_response_code(500);
-   //          echo "Oops! Something went wrong and we couldn't send your message.";
+            echo "Oops! Something went wrong and we couldn't send your message.";
 		}		
 	}
 else {
         // Not a POST request, set a 403 (forbidden) response code.
-		header("HTTP/1.1 403 There was a problem with your submission, please try again.");
+		header("HTTP/1.1 403 ERROR");
         
         // http_response_code(403);
-        // echo "There was a problem with your submission, please try again.";
+        echo "There was a problem with your submission, please try again.";
     }
 ?>
