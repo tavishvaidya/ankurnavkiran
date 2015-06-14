@@ -525,22 +525,25 @@
                     </div>
             </div> -->
             <div class="row pad-top-botm">
-                <div id="form-messages" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                    <div class="form-group" id="form-messages"></div>
+                    <div id="form_div">
                     <form method="post" action="send_mail.php" id="ajax-contact">
                         <div class="form-group">
-                            <input type="text" class="form-control wow rotateIn animated" data-wow-delay="0.5s" required="required" placeholder="Your Name">
+                            <input id="name" name="name" type="text" class="form-control wow rotateIn animated" data-wow-delay="0.5s" required="required" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control wow rotateIn animated" required="required" data-wow-delay="0.6s" placeholder="Your Email">
+                            <input type="email" id="email" name="email" class="form-control wow rotateIn animated" required="required" data-wow-delay="0.6s" placeholder="Your Email">
                         </div>
                         <div class="form-group">
-                            <textarea name="message"  required="required" data-wow-delay="0.7s" class="wow rotateIn animated form-control" style="min-height: 150px;" placeholder="Message"></textarea>
+                            <textarea name="message" id="message" required="required" data-wow-delay="0.7s" class="wow rotateIn animated form-control" style="min-height: 150px;" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-block btn-lg wow rotateIn animated " data-wow-delay="0.8s">SUBMIT REQUEST</button>
+                            <button type="submit" class="btn btn-success btn-block btn-lg wow rotateIn animated " data-wow-delay="0.8s">SUBMIT</button>
                         </div>
 
                     </form>
+                  </div>  
                 </div>
 
             </div>
