@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") //check if form was submitted
 
 				
 		$to      = 'vaidyatavish24@gmail.com';
-		$subject = "New contact from $name";
+		$subject = "New email from $name";
 		$message = wordwrap($message, 70, "\r\n");
 		$message = "From : ".$name. "\nEmail: ".$email."\n\n".$message;
 		$headers = 	'Reply-To: '.$email. "\r\n" .
@@ -30,18 +30,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") //check if form was submitted
 		if($ret == true)
 		{
 			$successFlag=1;
-			
-			http_response_code(200);
-			echo "Thank You! Your message has been sent.";
+			header("HTTP/1.1 200 Thank You! Your message has been sent.");
+			// http_response_code(200);
+			// echo "Thank You! Your message has been sent.";
 		}
 		else{
-			http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
+			header("HTTP/1.1 500 Oops! Something went wrong and we couldn't send your message.");
+			// http_response_code(500);
+   //          echo "Oops! Something went wrong and we couldn't send your message.";
 		}		
 	}
 else {
         // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+		header("HTTP/1.1 403 There was a problem with your submission, please try again.");
+        
+        // http_response_code(403);
+        // echo "There was a problem with your submission, please try again.";
     }
 ?>
