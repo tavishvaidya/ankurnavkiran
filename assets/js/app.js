@@ -6,6 +6,7 @@ $(function() {
 	// Get the messages div.
 	var formMessages = $('#form-messages');
 
+	var form_div = $('#form_div');
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
 		// Stop the browser from submitting the form.
@@ -27,7 +28,7 @@ $(function() {
 
 			// Set the message text.
 			$(formMessages).text(response);
-
+			$(form_div).hide()
 			// Clear the form.
 			$('#name').val('');
 			$('#email').val('');

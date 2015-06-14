@@ -362,3 +362,19 @@ margin-top: 20px;
   padding-top: 20px;
   display: block;
 }
+.success{
+  font-style: italic;
+  font-family: inherit;
+  background-color: #5cb85c;
+  padding: 7px;
+  border-radius: 6px;
+  text-align: center;
+}
+.error{
+  font-style: italic;
+  font-family: inherit;
+  background-color: #FF7373;
+  padding: 7px;
+  border-radius: 6px;
+  text-align: center;
+}
